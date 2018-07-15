@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func switchToggled(_ sender: UISwitch) {
-        changeText()
+        //changeText()
         mySwitch.addTarget(self, action: #selector(switchToggled(_:)), for: UIControlEvents.valueChanged)
     }
     
