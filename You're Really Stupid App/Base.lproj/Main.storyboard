@@ -95,24 +95,20 @@ Warren and Kin</string>
         <scene sceneID="auM-fa-ThS">
             <objects>
                 <viewController id="yjy-vg-6G7" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Aav-lP-5NT">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Aav-lP-5NT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frt-Ob-98Z" userLabel="Mine2" customClass="PressMeButton" customModule="You_re_Really_Stupid_App" customModuleProvider="target">
-                                <rect key="frame" x="97" y="258" width="180" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.060721293179999997" blue="0.1222267033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" springLoaded="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frt-Ob-98Z" userLabel="Mine2" customClass="PressMeButton" customModule="You_re_Really_Stupid_App">
+                                <rect key="frame" x="60" y="300" width="256" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
-                                    <bool key="isElement" value="YES"/>
+                                    <accessibilityTraits key="traits" button="YES" selected="YES" playsSound="YES"/>
+                                    <bool key="isElement" value="NO"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Press Me (3D)">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                                <state key="normal" image="Button 3D Unpressed.jpg"/>
+                                <state key="highlighted" image="Button 3D Pressed.jpg"/>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uq3-5A-wvq">
                                 <rect key="frame" x="312" y="49" width="49" height="31"/>
@@ -131,6 +127,9 @@ Warren and Kin</string>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="be3-MC-JTF"/>
                     </view>
                 </viewController>
@@ -188,8 +187,12 @@ Warren and Kin</string>
             <point key="canvasLocation" x="1476" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button 3D Pressed.jpg" width="300" height="240"/>
+        <image name="Button 3D Unpressed.jpg" width="516" height="412"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYm-gP-CTB"/>
+        <segue reference="kFk-KW-6IG"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.060721293179999997" blue="0.1222267033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
