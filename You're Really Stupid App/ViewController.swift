@@ -10,17 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+ 
+    @IBOutlet var StartButton: UIButton!
     @IBOutlet weak var mySwitch: UISwitch!
     
+    @IBOutlet var AboutUsButton: UIButton!
     @IBAction func SwitchTo3D(_ sender: UISwitch) {
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
 
+        StartButton.layer.cornerRadius = 9
+        AboutUsButton.layer.cornerRadius = 9
+        
+    }
+    
     @IBAction func switchToggled(_ sender: UISwitch) {
         //changeText()
         mySwitch.addTarget(self, action: #selector(switchToggled(_:)), for: UIControlEvents.valueChanged)
