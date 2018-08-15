@@ -7,56 +7,39 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PressMeButton: UIButton {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
-
+    /*
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    var player: AVAudioPlayer!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        let color = UIColor.green
-
-//        self.layer.cornerRadius = 10.0
-//        self.clipsToBounds = true
-//        self.layer.borderWidth = 3.0
-//
-//        self.layer.borderColor = color.cgColor
-
+        
+        print("Stupid 3")
+        
+        let path = Bundle.main.path(forResource: "stupid", ofType: "mp3")!
+        let url = URL(fileURLWithPath: path)
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player.prepareToPlay()
+        } catch let error as NSError {
+            print(error.description)
+        }
+        print("Stupid 3a")
         self.addTarget(self, action: #selector(onPress), for: .touchUpInside)
-        //hideButton()
     }
-    
-//    var buttonOn: Bool = false
-//
-//    func showButton() {
-//        self.alpha = 1
-//    }
-//    func hideButton() {
-//        self.alpha = 0
-//    }
-//
-//    func animateButtonPressed(sender: AnyObject){
-//
-//////        if buttonOn {
-////            hideButton()
-////            print("animate1")
-//////        } else {
-//////            showButton()
-//////            print("animate2")
-//////        }
-//
-//    }
     
     @objc func onPress() {
-        print("You're Stupid!")
+        print("Stupid 4")
+        
+        player.play()
     }
-
 }

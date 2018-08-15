@@ -11,6 +11,7 @@
 		2B47421A2105662200F99953 /* Button 3D Pressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B4742192105662200F99953 /* Button 3D Pressed.jpg */; };
 		2B52A86C21165E0000104FBD /* Button 2D Unpressed 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B52A86B21165DFF00104FBD /* Button 2D Unpressed 2.png */; };
 		2B52A8702116603F00104FBD /* Button 3D Unpressed 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B52A86F2116603F00104FBD /* Button 3D Unpressed 2.jpg */; };
+		2B57D1022123D47300891436 /* stupid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B57D1012123D47300891436 /* stupid.mp3 */; };
 		2BC90DF720F2DF2B00D97E70 /* PressMeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC90DF620F2DF2B00D97E70 /* PressMeButton.swift */; };
 		2BC90DF920F2E79400D97E70 /* SwitchDimButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC90DF820F2E79400D97E70 /* SwitchDimButton.swift */; };
 		2BFAA7E920E846A30001CD32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA7E820E846A30001CD32 /* AppDelegate.swift */; };
@@ -36,7 +37,7 @@
 		2B4742192105662200F99953 /* Button 3D Pressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Button 3D Pressed.jpg"; sourceTree = "<group>"; };
 		2B52A86B21165DFF00104FBD /* Button 2D Unpressed 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button 2D Unpressed 2.png"; sourceTree = "<group>"; };
 		2B52A86F2116603F00104FBD /* Button 3D Unpressed 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Button 3D Unpressed 2.jpg"; sourceTree = "<group>"; };
-		2B52A8712116648600104FBD /* UR Stupid.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UR Stupid.m4a"; sourceTree = "<group>"; };
+		2B57D1012123D47300891436 /* stupid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stupid.mp3; sourceTree = "<group>"; };
 		2BC90DF620F2DF2B00D97E70 /* PressMeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressMeButton.swift; sourceTree = "<group>"; };
 		2BC90DF820F2E79400D97E70 /* SwitchDimButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchDimButton.swift; sourceTree = "<group>"; };
 		2BFAA7E520E846A30001CD32 /* You're Really Stupid App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "You're Really Stupid App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,11 +91,11 @@
 		2BFAA7E720E846A30001CD32 /* You're Really Stupid App */ = {
 			isa = PBXGroup;
 			children = (
+				2B57D1012123D47300891436 /* stupid.mp3 */,
 				2B4742192105662200F99953 /* Button 3D Pressed.jpg */,
 				2B4742172105661D00F99953 /* Button 3D Unpressed.jpg */,
 				2B52A86F2116603F00104FBD /* Button 3D Unpressed 2.jpg */,
 				2B52A86B21165DFF00104FBD /* Button 2D Unpressed 2.png */,
-				2B52A8712116648600104FBD /* UR Stupid.m4a */,
 				2BFAA7E820E846A30001CD32 /* AppDelegate.swift */,
 				2BFAA7EA20E846A30001CD32 /* ViewController.swift */,
 				2BC90DF620F2DF2B00D97E70 /* PressMeButton.swift */,
@@ -198,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BFAA7F320E846A40001CD32 /* LaunchScreen.storyboard in Resources */,
+				2B57D1022123D47300891436 /* stupid.mp3 in Resources */,
 				2BFAA7F020E846A40001CD32 /* Assets.xcassets in Resources */,
 				2B52A86C21165E0000104FBD /* Button 2D Unpressed 2.png in Resources */,
 				2B4742182105661D00F99953 /* Button 3D Unpressed.jpg in Resources */,
