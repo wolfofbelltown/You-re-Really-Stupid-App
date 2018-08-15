@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		2B4742182105661D00F99953 /* Button 3D Unpressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B4742172105661D00F99953 /* Button 3D Unpressed.jpg */; };
 		2B47421A2105662200F99953 /* Button 3D Pressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B4742192105662200F99953 /* Button 3D Pressed.jpg */; };
-		2B52A8652116597400104FBD /* Button 2D Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B52A8632116597400104FBD /* Button 2D Pressed.png */; };
-		2B52A8662116597400104FBD /* Button 2D Unpressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B52A8642116597400104FBD /* Button 2D Unpressed.png */; };
-		2B52A86A21165DF800104FBD /* Button 2D Pressed 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B52A86921165DF700104FBD /* Button 2D Pressed 2.png */; };
 		2B52A86C21165E0000104FBD /* Button 2D Unpressed 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B52A86B21165DFF00104FBD /* Button 2D Unpressed 2.png */; };
 		2B52A8702116603F00104FBD /* Button 3D Unpressed 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B52A86F2116603F00104FBD /* Button 3D Unpressed 2.jpg */; };
 		2BC90DF720F2DF2B00D97E70 /* PressMeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC90DF620F2DF2B00D97E70 /* PressMeButton.swift */; };
@@ -37,9 +34,6 @@
 /* Begin PBXFileReference section */
 		2B4742172105661D00F99953 /* Button 3D Unpressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Button 3D Unpressed.jpg"; sourceTree = "<group>"; };
 		2B4742192105662200F99953 /* Button 3D Pressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Button 3D Pressed.jpg"; sourceTree = "<group>"; };
-		2B52A8632116597400104FBD /* Button 2D Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Button 2D Pressed.png"; path = "../../../../Desktop/Button 2D Pressed.png"; sourceTree = "<group>"; };
-		2B52A8642116597400104FBD /* Button 2D Unpressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Button 2D Unpressed.png"; path = "../../../../Desktop/Button 2D Unpressed.png"; sourceTree = "<group>"; };
-		2B52A86921165DF700104FBD /* Button 2D Pressed 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Button 2D Pressed 2.png"; path = "../../../../Desktop/Button 2D Pressed 2.png"; sourceTree = "<group>"; };
 		2B52A86B21165DFF00104FBD /* Button 2D Unpressed 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button 2D Unpressed 2.png"; sourceTree = "<group>"; };
 		2B52A86F2116603F00104FBD /* Button 3D Unpressed 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Button 3D Unpressed 2.jpg"; sourceTree = "<group>"; };
 		2B52A8712116648600104FBD /* UR Stupid.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UR Stupid.m4a"; sourceTree = "<group>"; };
@@ -99,9 +93,6 @@
 				2B4742192105662200F99953 /* Button 3D Pressed.jpg */,
 				2B4742172105661D00F99953 /* Button 3D Unpressed.jpg */,
 				2B52A86F2116603F00104FBD /* Button 3D Unpressed 2.jpg */,
-				2B52A8632116597400104FBD /* Button 2D Pressed.png */,
-				2B52A8642116597400104FBD /* Button 2D Unpressed.png */,
-				2B52A86921165DF700104FBD /* Button 2D Pressed 2.png */,
 				2B52A86B21165DFF00104FBD /* Button 2D Unpressed 2.png */,
 				2B52A8712116648600104FBD /* UR Stupid.m4a */,
 				2BFAA7E820E846A30001CD32 /* AppDelegate.swift */,
@@ -206,13 +197,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B52A8652116597400104FBD /* Button 2D Pressed.png in Resources */,
 				2BFAA7F320E846A40001CD32 /* LaunchScreen.storyboard in Resources */,
 				2BFAA7F020E846A40001CD32 /* Assets.xcassets in Resources */,
 				2B52A86C21165E0000104FBD /* Button 2D Unpressed 2.png in Resources */,
 				2B4742182105661D00F99953 /* Button 3D Unpressed.jpg in Resources */,
-				2B52A86A21165DF800104FBD /* Button 2D Pressed 2.png in Resources */,
-				2B52A8662116597400104FBD /* Button 2D Unpressed.png in Resources */,
 				2BFAA7EE20E846A30001CD32 /* Main.storyboard in Resources */,
 				2B52A8702116603F00104FBD /* Button 3D Unpressed 2.jpg in Resources */,
 				2B47421A2105662200F99953 /* Button 3D Pressed.jpg in Resources */,
