@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../../Desktop/Button 3D Pressed.jpg">
-   </FileRef>
-   <FileRef
-      location = "group:../../../../Desktop/Button 3D Unpressed.jpg">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
