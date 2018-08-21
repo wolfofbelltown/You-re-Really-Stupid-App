@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Disclaimer View Controller-->
         <scene sceneID="dQ3-Ar-qAQ">
             <objects>
-                <viewController id="htm-22-EOM" sceneMemberID="viewController">
+                <viewController id="htm-22-EOM" customClass="Disclaimer_ViewController" customModule="You_re_Really_Stupid_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z59-Cp-I5X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,10 +112,10 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
             </objects>
             <point key="canvasLocation" x="-255.19999999999999" y="116.74876847290641"/>
         </scene>
-        <!--View Controller-->
+        <!--About Us Viewcontroller-->
         <scene sceneID="sE4-TU-PVQ">
             <objects>
-                <viewController id="9jt-W4-boo" sceneMemberID="viewController">
+                <viewController id="9jt-W4-boo" customClass="About_Us_Viewcontroller" customModule="You_re_Really_Stupid_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awd-8y-N0O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +161,7 @@ Warren and Kin</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUS-T8-fkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255.19999999999999" y="878.57142857142856"/>
+            <point key="canvasLocation" x="-255" y="878"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="auM-fa-ThS">
@@ -268,10 +268,10 @@ Warren and Kin</string>
             </objects>
             <point key="canvasLocation" x="1476" y="131.52709359605913"/>
         </scene>
-        <!--View Controller-->
+        <!--Options View Controller-->
         <scene sceneID="cKg-jv-LI8">
             <objects>
-                <viewController id="ytG-ys-7iV" sceneMemberID="viewController">
+                <viewController id="ytG-ys-7iV" customClass="Options_ViewController" customModule="You_re_Really_Stupid_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRg-37-YpR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,7 +305,6 @@ Warren and Kin</string>
         <image name="Button 3D Unpressed 2.jpg" width="516" height="398"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9NV-Lj-C2t"/>
         <segue reference="xCt-of-MP4"/>
         <segue reference="n3E-q2-YKm"/>
     </inferredMetricsTieBreakers>
