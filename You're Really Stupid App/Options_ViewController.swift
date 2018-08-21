@@ -8,8 +8,14 @@
 
 import UIKit
 
-class Options_ViewController: UIViewController {
+class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet var Language: UILabel!
+    @IBOutlet var DropDown: UIPickerView!
+    
+    var languages = ["English", "Chinese", "Spanish"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +27,25 @@ class Options_ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        return languages[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return languages.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        Language.text = languages[row]
+    }
+    
     /*
     // MARK: - Navigation
 

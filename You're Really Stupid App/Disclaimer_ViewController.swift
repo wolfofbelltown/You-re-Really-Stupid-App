@@ -10,8 +10,12 @@ import UIKit
 
 class Disclaimer_ViewController: UIViewController {
 
+    @IBOutlet var AgreeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        AgreeButton.layer.cornerRadius = 9
 
         // Do any additional setup after loading the view.
     }
