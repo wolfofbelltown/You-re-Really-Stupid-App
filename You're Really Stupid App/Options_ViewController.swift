@@ -10,15 +10,21 @@ import UIKit
 
 class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet var ReturnButton: UIButton!
     @IBOutlet var Language: UILabel!
     @IBOutlet var DropDown: UIPickerView!
     
-    var languages = ["English", "Chinese", "Spanish"]
+    var languages = ["English", "Chinese", "Spanish","Korean", "Polish", "Japanese", "Alien"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ReturnButton.layer.cornerRadius = 9
+        Language.layer.cornerRadius = 9
+        Language.clipsToBounds = true
+       
+        
         // Do any additional setup after loading the view.
     }
 
