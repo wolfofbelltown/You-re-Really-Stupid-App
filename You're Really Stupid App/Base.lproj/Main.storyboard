@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,10 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYm-bp-M22">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYm-bp-M22">
                                 <rect key="frame" x="52" y="124" width="270" height="338"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36862745099999999" green="0.47843137250000001" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xYm-bp-M22" secondAttribute="height" multiplier="135:169" id="l0w-fu-dKD"/>
+                                </constraints>
                                 <string key="text">Disclaimer
 
 This app is intended to be fun and to create laughs.  By using this app, the developers are not responsible for any form of harm or issues that may or may not rise from the app usage.</string>
@@ -29,10 +33,12 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-PQ-cGS">
-                                <rect key="frame" x="127" y="470" width="120" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-PQ-cGS">
+                                <rect key="frame" x="127" y="498" width="120" height="54"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="7fB-tw-nXa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Agree">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,6 +52,15 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.36862745099999999" green="0.47843137250000001" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uEh-PQ-cGS" firstAttribute="leading" secondItem="pQa-Cw-Eix" secondAttribute="leading" constant="127" id="YEW-rC-mEk"/>
+                            <constraint firstItem="xYm-bp-M22" firstAttribute="top" secondItem="pQa-Cw-Eix" secondAttribute="top" constant="80" id="f1F-2F-KFN"/>
+                            <constraint firstItem="xYm-bp-M22" firstAttribute="leading" secondItem="pQa-Cw-Eix" secondAttribute="leading" constant="52" id="jQP-vQ-RDg"/>
+                            <constraint firstItem="xYm-bp-M22" firstAttribute="centerX" secondItem="uEh-PQ-cGS" secondAttribute="centerX" id="jdh-ix-5wf"/>
+                            <constraint firstItem="uEh-PQ-cGS" firstAttribute="top" secondItem="xYm-bp-M22" secondAttribute="bottom" constant="36" id="ki6-Si-qht"/>
+                            <constraint firstItem="pQa-Cw-Eix" firstAttribute="bottom" secondItem="uEh-PQ-cGS" secondAttribute="bottom" constant="226" id="z9I-xv-fOA"/>
+                            <constraint firstItem="xYm-bp-M22" firstAttribute="centerX" secondItem="Z59-Cp-I5X" secondAttribute="centerX" id="zCc-iW-Y42"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pQa-Cw-Eix"/>
                     </view>
                     <connections>
@@ -65,23 +80,29 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6Ep-1y-No4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6Ep-1y-No4">
                                 <rect key="frame" x="0.0" y="572" width="375" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.38133500647668395" green="0.21550693433398829" blue="0.053505036715419736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="lRh-dg-UpY"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="The Stupidly Amazing App" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-h1-kDq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The Stupidly Amazing App" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-h1-kDq">
                                 <rect key="frame" x="65" y="103" width="240" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36862745098039218" green="0.47843137254901957" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="Ma2-jw-Ehj"/>
+                                </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZL-az-Ld5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZL-az-Ld5">
                                 <rect key="frame" x="127" y="462" width="120" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="545-7X-CE2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -91,9 +112,8 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                                     <segue destination="4bh-qL-pjw" kind="show" id="eYm-gP-CTB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D96-4Z-vMQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D96-4Z-vMQ">
                                 <rect key="frame" x="247" y="708" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="About Us">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,6 +124,20 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.36862745098039218" green="0.47843137254901957" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DIf-h1-kDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="0jo-LJ-fvl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D96-4Z-vMQ" secondAttribute="trailing" constant="44" id="2zw-9J-4mM"/>
+                            <constraint firstAttribute="bottom" secondItem="6Ep-1y-No4" secondAttribute="bottom" id="6mA-tZ-4yy"/>
+                            <constraint firstItem="rZL-az-Ld5" firstAttribute="centerX" secondItem="6Ep-1y-No4" secondAttribute="centerX" id="8it-Z8-mGq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIf-h1-kDq" secondAttribute="trailing" constant="70" id="AHI-Fo-cAY"/>
+                            <constraint firstAttribute="trailing" secondItem="6Ep-1y-No4" secondAttribute="trailing" id="DzS-bI-pg1"/>
+                            <constraint firstItem="D96-4Z-vMQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="247" id="HeW-To-nul"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D96-4Z-vMQ" secondAttribute="bottom" constant="40" id="P6a-es-whO"/>
+                            <constraint firstItem="6Ep-1y-No4" firstAttribute="top" secondItem="rZL-az-Ld5" secondAttribute="bottom" constant="56" id="Sco-93-lrC"/>
+                            <constraint firstItem="DIf-h1-kDq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="cBQ-HJ-rN6"/>
+                            <constraint firstItem="6Ep-1y-No4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kDr-BA-5YU"/>
+                            <constraint firstItem="rZL-az-Ld5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="wp2-I6-8ip"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -123,15 +157,19 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tKu-0j-Xoc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tKu-0j-Xoc">
                                 <rect key="frame" x="0.0" y="572" width="376" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.38133500650000002" green="0.21550693430000001" blue="0.053505036720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="osq-cP-6VA"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvH-0L-tSm">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvH-0L-tSm">
                                 <rect key="frame" x="34" y="101" width="308" height="218"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36862745099999999" green="0.47843137250000001" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="R2v-oY-0BQ"/>
+                                </constraints>
                                 <string key="text">About Us  
 
 We are 2 brothers who are learning about Xcode and Swift. This is our "Hello World" app and we are just trying to make a few bucks to buy some beer :) . 
@@ -143,10 +181,12 @@ Warren and Kin</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbG-dG-SWJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbG-dG-SWJ">
                                 <rect key="frame" x="127" y="613" width="120" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Q4k-ub-mge"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Return">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -159,6 +199,17 @@ Warren and Kin</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.36862745099999999" green="0.47843137250000001" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tKu-0j-Xoc" secondAttribute="bottom" id="3dN-7C-9Am"/>
+                            <constraint firstItem="gzy-XK-C1K" firstAttribute="bottom" secondItem="UbG-dG-SWJ" secondAttribute="bottom" constant="111" id="3un-TQ-I4K"/>
+                            <constraint firstItem="wvH-0L-tSm" firstAttribute="leading" secondItem="gzy-XK-C1K" secondAttribute="leading" constant="34" id="9UH-Qu-sP9"/>
+                            <constraint firstItem="UbG-dG-SWJ" firstAttribute="centerX" secondItem="awd-8y-N0O" secondAttribute="centerX" id="Jn6-sD-jqi"/>
+                            <constraint firstItem="wvH-0L-tSm" firstAttribute="centerX" secondItem="tKu-0j-Xoc" secondAttribute="centerX" id="Ks3-ik-vTA"/>
+                            <constraint firstItem="wvH-0L-tSm" firstAttribute="centerX" secondItem="awd-8y-N0O" secondAttribute="centerX" id="Tsm-WS-jdE"/>
+                            <constraint firstItem="UbG-dG-SWJ" firstAttribute="leading" secondItem="gzy-XK-C1K" secondAttribute="leading" constant="127" id="YAQ-QS-NcR"/>
+                            <constraint firstItem="wvH-0L-tSm" firstAttribute="top" secondItem="gzy-XK-C1K" secondAttribute="top" constant="57" id="i0z-jm-NqO"/>
+                            <constraint firstItem="tKu-0j-Xoc" firstAttribute="leading" secondItem="awd-8y-N0O" secondAttribute="leading" id="vXh-wG-Jxt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gzy-XK-C1K"/>
                     </view>
                 </viewController>
@@ -174,37 +225,56 @@ Warren and Kin</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" springLoaded="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frt-Ob-98Z" userLabel="Mine2" customClass="PressMeButton" customModule="You_re_Really_Stupid_App">
+                            <button clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" springLoaded="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frt-Ob-98Z" userLabel="Mine2" customClass="PressMeButton" customModule="You_re_Really_Stupid_App">
                                 <rect key="frame" x="56" y="304" width="260" height="206"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" selected="YES" playsSound="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="206" id="Bkh-b8-yZH"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="Button 3D Unpressed 2.jpg"/>
                                 <state key="highlighted" image="Button 3D Pressed.jpg"/>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uq3-5A-wvq">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uq3-5A-wvq">
                                 <rect key="frame" x="312" y="49" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="SwitchTo3D:" destination="5C7-Rq-9Zn" eventType="valueChanged" id="ohP-ky-n9K"/>
                                     <segue destination="4bh-qL-pjw" kind="show" id="kFk-KW-6IG"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2D/3D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-sc-gTR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2D/3D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-sc-gTR">
                                 <rect key="frame" x="310" y="20" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-aw-iEW">
+                                <rect key="frame" x="233" y="701" width="83" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Options">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" image="YES"/>
                         </accessibility>
+                        <constraints>
+                            <constraint firstItem="Uq3-5A-wvq" firstAttribute="leading" secondItem="be3-MC-JTF" secondAttribute="leading" constant="312" id="3P6-5M-q7k"/>
+                            <constraint firstItem="be3-MC-JTF" firstAttribute="trailing" secondItem="frt-Ob-98Z" secondAttribute="trailing" constant="59" id="FGK-Nc-7PD"/>
+                            <constraint firstItem="be3-MC-JTF" firstAttribute="bottom" secondItem="cwH-aw-iEW" secondAttribute="bottom" constant="47" id="Nc6-4q-vaD"/>
+                            <constraint firstItem="Uq3-5A-wvq" firstAttribute="top" secondItem="YVj-sc-gTR" secondAttribute="bottom" constant="8" symbolic="YES" id="VgY-6s-hnv"/>
+                            <constraint firstItem="Uq3-5A-wvq" firstAttribute="top" secondItem="be3-MC-JTF" secondAttribute="top" constant="5" id="kE3-n0-0PO"/>
+                            <constraint firstItem="cwH-aw-iEW" firstAttribute="leading" secondItem="be3-MC-JTF" secondAttribute="leading" constant="233" id="ky1-R4-vao"/>
+                            <constraint firstItem="frt-Ob-98Z" firstAttribute="trailing" secondItem="cwH-aw-iEW" secondAttribute="trailing" id="nKe-6L-TQr"/>
+                            <constraint firstItem="frt-Ob-98Z" firstAttribute="top" secondItem="Aav-lP-5NT" secondAttribute="top" constant="304" id="o0Z-yO-j4Y"/>
+                            <constraint firstItem="YVj-sc-gTR" firstAttribute="trailing" secondItem="Aav-lP-5NT" secondAttribute="trailingMargin" id="uQQ-Qh-YSx"/>
+                            <constraint firstItem="frt-Ob-98Z" firstAttribute="leading" secondItem="be3-MC-JTF" secondAttribute="leading" constant="56" id="wCl-7a-kQF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="be3-MC-JTF"/>
                     </view>
                 </viewController>
@@ -220,13 +290,15 @@ Warren and Kin</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VW2-bs-SpV" userLabel="Mine2" customClass="PressMeButton" customModule="You_re_Really_Stupid_App" customModuleProvider="target">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VW2-bs-SpV" userLabel="Mine2" customClass="PressMeButton" customModule="You_re_Really_Stupid_App" customModuleProvider="target">
                                 <rect key="frame" x="86" y="308" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="DdY-oG-1uC"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="Button 2D Unpressed 2.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,24 +306,21 @@ Warren and Kin</string>
                                 </state>
                                 <state key="highlighted" image="Button 2D Pressed 2.png"/>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uI6-iA-gzW">
-                                <rect key="frame" x="312" y="49" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uI6-iA-gzW">
+                                <rect key="frame" x="312" y="49" width="51" height="31"/>
                                 <connections>
                                     <action selector="SwitchTo3D:" destination="5C7-Rq-9Zn" eventType="valueChanged" id="Kd8-dy-Ptl"/>
                                     <segue destination="yjy-vg-6G7" kind="show" id="KT8-bl-iP8"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2D/3D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QL4-kI-bfY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2D/3D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QL4-kI-bfY">
                                 <rect key="frame" x="310" y="20" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-B3-tSz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-B3-tSz">
                                 <rect key="frame" x="235" y="716" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Options">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -262,6 +331,18 @@ Warren and Kin</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VW2-bs-SpV" firstAttribute="leading" secondItem="Tqh-C1-VDE" secondAttribute="leading" constant="86" id="1j2-QR-NnQ"/>
+                            <constraint firstItem="QL4-kI-bfY" firstAttribute="trailing" secondItem="eI7-4A-hWs" secondAttribute="trailingMargin" id="IVx-YU-QTw"/>
+                            <constraint firstItem="uI6-iA-gzW" firstAttribute="top" secondItem="QL4-kI-bfY" secondAttribute="bottom" constant="8" symbolic="YES" id="JS9-8q-r39"/>
+                            <constraint firstItem="Tqh-C1-VDE" firstAttribute="trailing" secondItem="vA7-B3-tSz" secondAttribute="trailing" constant="57" id="N89-sx-y7Z"/>
+                            <constraint firstItem="Tqh-C1-VDE" firstAttribute="trailing" secondItem="VW2-bs-SpV" secondAttribute="trailing" constant="89" id="NFL-Ep-Slb"/>
+                            <constraint firstItem="VW2-bs-SpV" firstAttribute="top" secondItem="Tqh-C1-VDE" secondAttribute="top" constant="264" id="XoM-ty-Xjx"/>
+                            <constraint firstItem="uI6-iA-gzW" firstAttribute="top" secondItem="Tqh-C1-VDE" secondAttribute="top" constant="5" id="ZSc-Zz-FAZ"/>
+                            <constraint firstItem="Tqh-C1-VDE" firstAttribute="bottom" secondItem="vA7-B3-tSz" secondAttribute="bottom" constant="32" id="ahR-70-KlJ"/>
+                            <constraint firstItem="vA7-B3-tSz" firstAttribute="leading" secondItem="Tqh-C1-VDE" secondAttribute="leading" constant="235" id="nx8-Ie-KWL"/>
+                            <constraint firstItem="uI6-iA-gzW" firstAttribute="leading" secondItem="Tqh-C1-VDE" secondAttribute="leading" constant="312" id="o29-zq-1rY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Tqh-C1-VDE"/>
                     </view>
                     <navigationItem key="navigationItem" id="9He-fY-pHV"/>
@@ -279,9 +360,8 @@ Warren and Kin</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-4Z-Njh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-4Z-Njh">
                                 <rect key="frame" x="260" y="705" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Return">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -290,18 +370,22 @@ Warren and Kin</string>
                                     <segue destination="4bh-qL-pjw" kind="show" id="xCt-of-MP4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Languages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPV-Xu-jgk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPV-Xu-jgk">
                                 <rect key="frame" x="71" y="130" width="233" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="C4w-6E-g5h"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-pA-GAQ">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-pA-GAQ">
                                 <rect key="frame" x="71" y="181" width="233" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="8dC-fv-GV6"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="ytG-ys-7iV" id="kQX-05-kL2"/>
                                     <outlet property="delegate" destination="ytG-ys-7iV" id="mvZ-Ar-XS0"/>
@@ -309,6 +393,17 @@ Warren and Kin</string>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="leading" secondItem="enr-tK-m0t" secondAttribute="leading" constant="71" id="CJO-Gg-vlI"/>
+                            <constraint firstItem="enr-tK-m0t" firstAttribute="bottom" secondItem="nZe-4Z-Njh" secondAttribute="bottom" constant="43" id="D80-KK-CIv"/>
+                            <constraint firstItem="nZe-4Z-Njh" firstAttribute="leading" secondItem="enr-tK-m0t" secondAttribute="leading" constant="260" id="Dmt-hZ-s2p"/>
+                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="leading" secondItem="vfn-pA-GAQ" secondAttribute="leading" id="WiN-DR-eE9"/>
+                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="top" secondItem="enr-tK-m0t" secondAttribute="top" constant="86" id="gpw-2a-TKh"/>
+                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="trailing" secondItem="vfn-pA-GAQ" secondAttribute="trailing" id="iNx-yi-KBQ"/>
+                            <constraint firstItem="enr-tK-m0t" firstAttribute="trailing" secondItem="nZe-4Z-Njh" secondAttribute="trailing" constant="32" id="jOS-cx-5iX"/>
+                            <constraint firstItem="vfn-pA-GAQ" firstAttribute="top" secondItem="ZPV-Xu-jgk" secondAttribute="bottom" constant="8" symbolic="YES" id="jUD-5M-FZa"/>
+                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="centerX" secondItem="qRg-37-YpR" secondAttribute="centerX" id="mLn-j0-ybZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="enr-tK-m0t"/>
                     </view>
                     <connections>
@@ -330,9 +425,8 @@ Warren and Kin</string>
         <image name="Button 3D Unpressed 2.jpg" width="516" height="398"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Een-JG-YvE"/>
-        <segue reference="xCt-of-MP4"/>
-        <segue reference="nsg-ic-ovw"/>
+        <segue reference="kFk-KW-6IG"/>
+        <segue reference="n3E-q2-YKm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.060721293179999997" blue="0.1222267033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
