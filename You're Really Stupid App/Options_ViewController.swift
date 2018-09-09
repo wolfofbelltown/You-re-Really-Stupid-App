@@ -33,20 +33,23 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         // Dispose of any resources that can be recreated.
     }
     
+    // https://codewithchris.com/uipickerview-example/
+    // Sets the number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
         return 1
     }
-    
+    // Returns data for specified row and column
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
         return languages[row]
     }
+    // Sets the number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
         return languages.count
     }
-    
+    // Delegate method used to detect what user has selected
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         Language.text = languages[row]
