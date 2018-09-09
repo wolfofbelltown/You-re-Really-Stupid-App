@@ -405,6 +405,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DDEBUG_Options";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG_Options";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team-Stupid.You-re-Really-Stupid-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -423,6 +425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DDEBUG_Options";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team-Stupid.You-re-Really-Stupid-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

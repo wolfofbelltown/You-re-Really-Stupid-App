@@ -16,21 +16,35 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     var languages = ["English", "Chinese", "Spanish","Korean", "Polish", "Japanese", "Alien"]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         ReturnButton.layer.cornerRadius = 9
         Language.layer.cornerRadius = 9
         Language.clipsToBounds = true
-       
-        
+    
         // Do any additional setup after loading the view.
+        
+        // Set up debug file
+//        let str = "Super long string here"
+//        let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
+//        do {
+//            try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+//            print(filename)
+//        } catch {
+//            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+//        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
     
     // https://codewithchris.com/uipickerview-example/
@@ -53,6 +67,9 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         Language.text = languages[row]
+        #if DEBUG_Options
+        print("DEBUG_Options: ",Language.text!)
+        #endif
     }
     
     /*
