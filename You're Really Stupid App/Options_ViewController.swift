@@ -22,7 +22,9 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         ReturnButton.layer.cornerRadius = 9
         Language.layer.cornerRadius = 9
         Language.clipsToBounds = true
-    
+        #if DEBUG_Options
+            print("page1 - Current Number = \(GlobalVariables.sharedManager.myName)")
+        #endif
         // Do any additional setup after loading the view.
         
         // Set up debug file
