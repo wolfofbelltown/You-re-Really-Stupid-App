@@ -9,7 +9,7 @@
 class GlobalVariables {
     
     // These are the properties you can store in your singleton
-    var myName: String = "bob"
+    var myName: String = "English"
     
     
     // Here is how you would get to it without there being a global collision of variables.

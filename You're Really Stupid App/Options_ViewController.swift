@@ -23,20 +23,24 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         Language.layer.cornerRadius = 9
         Language.clipsToBounds = true
         #if DEBUG_Options
-            print("page1 - Current Number = \(GlobalVariables.sharedManager.myName)")
+            print("DEBUG_Options: \(GlobalVariables.sharedManager.myName)")
         #endif
         // Do any additional setup after loading the view.
         
+        // Loads UIPickerView with last selection. Defaults to "English" set in GlobalVariables.swift
+        if let index = languages.index(where: { $0 == GlobalVariables.sharedManager.myName }) {
+            DropDown.selectRow(index, inComponent: 0, animated: false)
+        }
+    
         // Set up debug file
-//        let str = "Super long string here"
-//        let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
-//        do {
-//            try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-//            print(filename)
-//        } catch {
-//            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
-//        }
-        
+        //        let str = "Super long string here"
+        //        let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
+        //        do {
+        //            try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+        //            print(filename)
+        //        } catch {
+        //            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+        //        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +53,10 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         return paths[0]
     }
     
-    // https://codewithchris.com/uipickerview-example/
+    /*
+     Descriptions of the following methods are referenced by https://codewithchris.com/uipickerview-example/
+    */
+    
     // Sets the number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
@@ -69,8 +76,12 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         Language.text = languages[row]
+        
+        // Saves the last selected language to global variables
+        GlobalVariables.sharedManager.myName = Language.text!
+
         #if DEBUG_Options
-        print("DEBUG_Options: ",Language.text!)
+            print("DEBUG_Options: \(GlobalVariables.sharedManager.myName)")
         #endif
     }
     
