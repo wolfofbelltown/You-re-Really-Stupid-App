@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
  
+    @IBOutlet weak var BeachBall: UIImageView!
     @IBOutlet var StartButton: UIButton!
     @IBOutlet weak var mySwitch: UISwitch!
     
@@ -30,6 +31,15 @@ class ViewController: UIViewController {
     @IBAction func switchToggled(_ sender: UISwitch) {
         //changeText()
         mySwitch.addTarget(self, action: #selector(switchToggled(_:)), for: UIControlEvents.valueChanged)
+    }
+    
+    // Animate Ball movement
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIView.animate(withDuration: 1, delay: 0.2, options:[.autoreverse, .repeat],
+                       animations:{self.BeachBall.center.y += 72}, completion: nil)
+        // Maybe add bounce sound after animation hits the ground.
     }
     
 //    func changeText() {

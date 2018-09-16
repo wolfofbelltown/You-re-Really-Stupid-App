@@ -83,15 +83,12 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6Ep-1y-No4">
                                 <rect key="frame" x="0.0" y="572" width="375" height="240"/>
                                 <color key="backgroundColor" red="0.38133500647668395" green="0.21550693433398829" blue="0.053505036715419736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="lRh-dg-UpY"/>
-                                </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The Stupidly Amazing App" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-h1-kDq">
                                 <rect key="frame" x="65" y="103" width="240" height="154"/>
                                 <color key="backgroundColor" red="0.36862745098039218" green="0.47843137254901957" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="154" id="Ma2-jw-Ehj"/>
+                                    <constraint firstAttribute="height" constant="154" id="fg8-KS-C4L"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
@@ -101,7 +98,7 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                                 <rect key="frame" x="127" y="462" width="120" height="54"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="545-7X-CE2"/>
+                                    <constraint firstAttribute="height" constant="54" id="yEc-Qs-2UH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start">
@@ -122,26 +119,37 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                                     <segue destination="9jt-W4-boo" kind="show" id="9NV-Lj-C2t"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach_Ball" translatesAutoresizingMaskIntoConstraints="NO" id="foD-Pi-fLO">
+                                <rect key="frame" x="16" y="400" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gzS-GM-eRE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.36862745098039218" green="0.47843137254901957" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DIf-h1-kDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="0jo-LJ-fvl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D96-4Z-vMQ" secondAttribute="trailing" constant="44" id="2zw-9J-4mM"/>
-                            <constraint firstAttribute="bottom" secondItem="6Ep-1y-No4" secondAttribute="bottom" id="6mA-tZ-4yy"/>
-                            <constraint firstItem="rZL-az-Ld5" firstAttribute="centerX" secondItem="6Ep-1y-No4" secondAttribute="centerX" id="8it-Z8-mGq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIf-h1-kDq" secondAttribute="trailing" constant="70" id="AHI-Fo-cAY"/>
-                            <constraint firstAttribute="trailing" secondItem="6Ep-1y-No4" secondAttribute="trailing" id="DzS-bI-pg1"/>
-                            <constraint firstItem="D96-4Z-vMQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="247" id="HeW-To-nul"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D96-4Z-vMQ" secondAttribute="bottom" constant="40" id="P6a-es-whO"/>
-                            <constraint firstItem="6Ep-1y-No4" firstAttribute="top" secondItem="rZL-az-Ld5" secondAttribute="bottom" constant="56" id="Sco-93-lrC"/>
-                            <constraint firstItem="DIf-h1-kDq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="cBQ-HJ-rN6"/>
-                            <constraint firstItem="6Ep-1y-No4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kDr-BA-5YU"/>
-                            <constraint firstItem="rZL-az-Ld5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="wp2-I6-8ip"/>
+                            <constraint firstItem="6Ep-1y-No4" firstAttribute="top" secondItem="rZL-az-Ld5" secondAttribute="bottom" constant="56" id="18v-OF-VWa"/>
+                            <constraint firstItem="rZL-az-Ld5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="1yL-BN-Kee"/>
+                            <constraint firstItem="6Ep-1y-No4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4pB-MU-fQc"/>
+                            <constraint firstItem="foD-Pi-fLO" firstAttribute="top" secondItem="DIf-h1-kDq" secondAttribute="bottom" constant="143" id="5Sy-Zk-E7f"/>
+                            <constraint firstItem="DIf-h1-kDq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="7GL-fP-lc6"/>
+                            <constraint firstItem="rZL-az-Ld5" firstAttribute="centerX" secondItem="6Ep-1y-No4" secondAttribute="centerX" id="Aru-kz-2ot"/>
+                            <constraint firstItem="DIf-h1-kDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="DTc-X0-nic"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D96-4Z-vMQ" secondAttribute="trailing" constant="44" id="E9P-Sn-ZcT"/>
+                            <constraint firstAttribute="bottom" secondItem="6Ep-1y-No4" secondAttribute="bottom" id="IAa-wB-GVk"/>
+                            <constraint firstItem="D96-4Z-vMQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="247" id="Pa3-QC-r4D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIf-h1-kDq" secondAttribute="trailing" constant="70" id="XbZ-73-2yX"/>
+                            <constraint firstItem="foD-Pi-fLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zkp-bd-hoV"/>
+                            <constraint firstItem="rZL-az-Ld5" firstAttribute="top" secondItem="foD-Pi-fLO" secondAttribute="bottom" constant="-38" id="fdB-J0-dz5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="foD-Pi-fLO" secondAttribute="trailing" constant="259" id="gZy-ck-CWV"/>
+                            <constraint firstAttribute="trailing" secondItem="6Ep-1y-No4" secondAttribute="trailing" id="gb6-3D-9RW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D96-4Z-vMQ" secondAttribute="bottom" constant="40" id="rN6-39-BSl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="AboutUsButton" destination="D96-4Z-vMQ" id="CQ1-2a-HAU"/>
+                        <outlet property="BeachBall" destination="foD-Pi-fLO" id="3DI-MX-xNk"/>
                         <outlet property="StartButton" destination="rZL-az-Ld5" id="hnk-HE-7az"/>
                     </connections>
                 </viewController>
@@ -239,7 +247,7 @@ Warren and Kin</string>
                                 <state key="highlighted" image="Button 3D Pressed.jpg"/>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uq3-5A-wvq">
-                                <rect key="frame" x="312" y="49" width="49" height="31"/>
+                                <rect key="frame" x="312" y="49" width="51" height="31"/>
                                 <connections>
                                     <action selector="SwitchTo3D:" destination="5C7-Rq-9Zn" eventType="valueChanged" id="ohP-ky-n9K"/>
                                     <segue destination="4bh-qL-pjw" kind="show" id="kFk-KW-6IG"/>
@@ -419,6 +427,7 @@ Warren and Kin</string>
     </scenes>
     <resources>
         <image name="Background" width="414" height="736"/>
+        <image name="Beach_Ball" width="958" height="958"/>
         <image name="Button 2D Pressed 2.png" width="430" height="430"/>
         <image name="Button 2D Unpressed 2.png" width="430" height="430"/>
         <image name="Button 3D Pressed.jpg" width="300" height="240"/>
