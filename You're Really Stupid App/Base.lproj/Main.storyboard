@@ -83,12 +83,15 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6Ep-1y-No4">
                                 <rect key="frame" x="0.0" y="572" width="375" height="240"/>
                                 <color key="backgroundColor" red="0.38133500647668395" green="0.21550693433398829" blue="0.053505036715419736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Dmf-yW-Tak"/>
+                                </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The Stupidly Amazing App" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-h1-kDq">
                                 <rect key="frame" x="65" y="103" width="240" height="154"/>
                                 <color key="backgroundColor" red="0.36862745098039218" green="0.47843137254901957" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="154" id="fg8-KS-C4L"/>
+                                    <constraint firstAttribute="height" constant="154" id="qMb-vt-yhS"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
@@ -98,7 +101,7 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                                 <rect key="frame" x="127" y="462" width="120" height="54"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="yEc-Qs-2UH"/>
+                                    <constraint firstAttribute="height" constant="54" id="xfx-gK-eLa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start">
@@ -122,28 +125,27 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach_Ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="foD-Pi-fLO">
                                 <rect key="frame" x="16" y="400" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="gzS-GM-eRE"/>
+                                    <constraint firstAttribute="height" constant="100" id="ozu-CG-DZC"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.36862745098039218" green="0.47843137254901957" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Ep-1y-No4" firstAttribute="top" secondItem="rZL-az-Ld5" secondAttribute="bottom" constant="56" id="18v-OF-VWa"/>
-                            <constraint firstItem="rZL-az-Ld5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="1yL-BN-Kee"/>
-                            <constraint firstItem="6Ep-1y-No4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4pB-MU-fQc"/>
-                            <constraint firstItem="foD-Pi-fLO" firstAttribute="top" secondItem="DIf-h1-kDq" secondAttribute="bottom" constant="143" id="5Sy-Zk-E7f"/>
-                            <constraint firstItem="DIf-h1-kDq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="7GL-fP-lc6"/>
-                            <constraint firstItem="rZL-az-Ld5" firstAttribute="centerX" secondItem="6Ep-1y-No4" secondAttribute="centerX" id="Aru-kz-2ot"/>
-                            <constraint firstItem="DIf-h1-kDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="DTc-X0-nic"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D96-4Z-vMQ" secondAttribute="trailing" constant="44" id="E9P-Sn-ZcT"/>
-                            <constraint firstAttribute="bottom" secondItem="6Ep-1y-No4" secondAttribute="bottom" id="IAa-wB-GVk"/>
-                            <constraint firstItem="D96-4Z-vMQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="247" id="Pa3-QC-r4D"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIf-h1-kDq" secondAttribute="trailing" constant="70" id="XbZ-73-2yX"/>
-                            <constraint firstItem="foD-Pi-fLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zkp-bd-hoV"/>
-                            <constraint firstItem="rZL-az-Ld5" firstAttribute="top" secondItem="foD-Pi-fLO" secondAttribute="bottom" constant="-38" id="fdB-J0-dz5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="foD-Pi-fLO" secondAttribute="trailing" constant="259" id="gZy-ck-CWV"/>
-                            <constraint firstAttribute="trailing" secondItem="6Ep-1y-No4" secondAttribute="trailing" id="gb6-3D-9RW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D96-4Z-vMQ" secondAttribute="bottom" constant="40" id="rN6-39-BSl"/>
+                            <constraint firstItem="DIf-h1-kDq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="077-3N-dgp"/>
+                            <constraint firstItem="rZL-az-Ld5" firstAttribute="centerX" secondItem="6Ep-1y-No4" secondAttribute="centerX" id="3kK-lm-kRu"/>
+                            <constraint firstAttribute="trailing" secondItem="6Ep-1y-No4" secondAttribute="trailing" id="6uO-QZ-K8X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIf-h1-kDq" secondAttribute="trailing" constant="70" id="8ST-fT-bsc"/>
+                            <constraint firstAttribute="bottom" secondItem="6Ep-1y-No4" secondAttribute="bottom" id="AJH-d9-svA"/>
+                            <constraint firstItem="6Ep-1y-No4" firstAttribute="top" secondItem="rZL-az-Ld5" secondAttribute="bottom" constant="56" id="Ax1-Rz-muw"/>
+                            <constraint firstItem="D96-4Z-vMQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="247" id="E1I-mB-V6Z"/>
+                            <constraint firstItem="foD-Pi-fLO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="O9V-eJ-ODX"/>
+                            <constraint firstItem="6Ep-1y-No4" firstAttribute="top" secondItem="foD-Pi-fLO" secondAttribute="bottom" constant="72" id="SsY-t8-iG5"/>
+                            <constraint firstItem="6Ep-1y-No4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sxn-KG-98g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rZL-az-Ld5" secondAttribute="trailing" constant="128" id="VIg-Ai-jK1"/>
+                            <constraint firstItem="DIf-h1-kDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="XIr-ad-H0q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D96-4Z-vMQ" secondAttribute="trailing" constant="44" id="mDD-jF-wS3"/>
+                            <constraint firstItem="rZL-az-Ld5" firstAttribute="leading" secondItem="foD-Pi-fLO" secondAttribute="trailing" constant="11" id="xxC-S6-r5x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D96-4Z-vMQ" secondAttribute="bottom" constant="40" id="zjF-Ya-hTw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
