@@ -11,38 +11,49 @@ import UIKit
 class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet var ReturnButton: UIButton!
-    @IBOutlet var Language: UILabel!
+    @IBOutlet var Phrase: UILabel!
     @IBOutlet var DropDown: UIPickerView!
     
-    var languages = ["English", "Chinese", "Spanish","Korean", "Polish", "Japanese", "Alien"]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
+    var phrases: [String] = Bundle.main.paths(forResourcesOfType: "m4a", inDirectory: ".")
+
+    override func viewDidLoad() {
+        
+        var index_counter = 0
+        
+        for (element) in phrases {
+            let searchString = element
+            let regexp = "((\\/){1}([a-zA-Z0-9\\.]*))$"
+            var result = ""
+            print("MINE1 :", result, " and then...", searchString)
+            if let range = searchString.range(of: regexp, options: .regularExpression) {
+                result = String(searchString[range])
+                result = result.replacingOccurrences(of: "/", with: "")
+                result = result.replacingOccurrences(of: ".m4a", with: "")
+                phrases[index_counter] = result
+                print("MINE2 : ", phrases[index_counter])
+            }
+            print("MINE3 : ", result)
+            index_counter = index_counter + 1
+        }
+
+        super.viewDidLoad()
+        
         ReturnButton.layer.cornerRadius = 9
-        Language.layer.cornerRadius = 9
-        Language.clipsToBounds = true
+        Phrase.layer.cornerRadius = 9
+        Phrase.clipsToBounds = true
         #if DEBUG_Options
             print("DEBUG_Options: \(GlobalVariables.sharedManager.myName)")
         #endif
         // Do any additional setup after loading the view.
         
         // Loads UIPickerView with last selection. Defaults to "English" set in GlobalVariables.swift
-        if let index = languages.index(where: { $0 == GlobalVariables.sharedManager.myName }) {
+        if let index = phrases.index(where: { $0 == GlobalVariables.sharedManager.myName }) {
             DropDown.selectRow(index, inComponent: 0, animated: false)
         }
-    
-        // Set up debug file
-        //        let str = "Super long string here"
-        //        let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
-        //        do {
-        //            try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-        //            print(filename)
-        //        } catch {
-        //            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
-        //        }
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,7 +66,7 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     /*
      Descriptions of the following methods are referenced by https://codewithchris.com/uipickerview-example/
-    */
+     */
     
     // Sets the number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int
@@ -65,34 +76,32 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     // Returns data for specified row and column
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        return languages[row]
+        return phrases[row]
     }
     // Sets the number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
-        return languages.count
+        return phrases.count
     }
     // Delegate method used to detect what user has selected
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        Language.text = languages[row]
-        
-        // Saves the last selected language to global variables
-        GlobalVariables.sharedManager.myName = Language.text!
-
+        // Saves the last selected Language to global variables
+           GlobalVariables.sharedManager.myName = phrases[row]
         #if DEBUG_Options
-            print("DEBUG_Options: \(GlobalVariables.sharedManager.myName)")
+        print("DEBUG_Options: \(GlobalVariables.sharedManager.myName)")
         #endif
     }
     
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

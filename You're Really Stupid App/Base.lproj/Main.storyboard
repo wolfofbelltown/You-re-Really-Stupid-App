@@ -239,7 +239,7 @@ Warren and Kin</string>
                                 <state key="highlighted" image="Button 3D Pressed.jpg"/>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uq3-5A-wvq">
-                                <rect key="frame" x="312" y="49" width="49" height="31"/>
+                                <rect key="frame" x="312" y="49" width="51" height="31"/>
                                 <connections>
                                     <action selector="SwitchTo3D:" destination="5C7-Rq-9Zn" eventType="valueChanged" id="ohP-ky-n9K"/>
                                     <segue destination="4bh-qL-pjw" kind="show" id="kFk-KW-6IG"/>
@@ -358,7 +358,7 @@ Warren and Kin</string>
                 <viewController id="ytG-ys-7iV" customClass="Options_ViewController" customModule="You_re_Really_Stupid_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRg-37-YpR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-4Z-Njh">
                                 <rect key="frame" x="260" y="705" width="83" height="30"/>
@@ -370,45 +370,38 @@ Warren and Kin</string>
                                     <segue destination="4bh-qL-pjw" kind="show" id="xCt-of-MP4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPV-Xu-jgk">
-                                <rect key="frame" x="71" y="130" width="233" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="C4w-6E-g5h"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-pA-GAQ">
-                                <rect key="frame" x="71" y="181" width="233" height="162"/>
+                                <rect key="frame" x="86" y="206" width="200" height="400"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="8dC-fv-GV6"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="ytG-ys-7iV" id="kQX-05-kL2"/>
                                     <outlet property="delegate" destination="ytG-ys-7iV" id="mvZ-Ar-XS0"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phrases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztJ-UM-Gkj">
+                                <rect key="frame" x="137" y="138" width="100" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="leading" secondItem="enr-tK-m0t" secondAttribute="leading" constant="71" id="CJO-Gg-vlI"/>
                             <constraint firstItem="enr-tK-m0t" firstAttribute="bottom" secondItem="nZe-4Z-Njh" secondAttribute="bottom" constant="43" id="D80-KK-CIv"/>
                             <constraint firstItem="nZe-4Z-Njh" firstAttribute="leading" secondItem="enr-tK-m0t" secondAttribute="leading" constant="260" id="Dmt-hZ-s2p"/>
-                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="leading" secondItem="vfn-pA-GAQ" secondAttribute="leading" id="WiN-DR-eE9"/>
-                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="top" secondItem="enr-tK-m0t" secondAttribute="top" constant="86" id="gpw-2a-TKh"/>
-                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="trailing" secondItem="vfn-pA-GAQ" secondAttribute="trailing" id="iNx-yi-KBQ"/>
+                            <constraint firstItem="vfn-pA-GAQ" firstAttribute="top" secondItem="ztJ-UM-Gkj" secondAttribute="bottom" constant="33" id="ayX-t8-VJz"/>
+                            <constraint firstItem="vfn-pA-GAQ" firstAttribute="leading" secondItem="enr-tK-m0t" secondAttribute="leading" constant="86" id="jJg-fa-mK3"/>
                             <constraint firstItem="enr-tK-m0t" firstAttribute="trailing" secondItem="nZe-4Z-Njh" secondAttribute="trailing" constant="32" id="jOS-cx-5iX"/>
-                            <constraint firstItem="vfn-pA-GAQ" firstAttribute="top" secondItem="ZPV-Xu-jgk" secondAttribute="bottom" constant="8" symbolic="YES" id="jUD-5M-FZa"/>
-                            <constraint firstItem="ZPV-Xu-jgk" firstAttribute="centerX" secondItem="qRg-37-YpR" secondAttribute="centerX" id="mLn-j0-ybZ"/>
+                            <constraint firstItem="ztJ-UM-Gkj" firstAttribute="centerX" secondItem="qRg-37-YpR" secondAttribute="centerX" id="jPA-Bx-jDe"/>
+                            <constraint firstItem="vfn-pA-GAQ" firstAttribute="centerY" secondItem="qRg-37-YpR" secondAttribute="centerY" id="mfR-6e-7pO"/>
+                            <constraint firstItem="enr-tK-m0t" firstAttribute="trailing" secondItem="vfn-pA-GAQ" secondAttribute="trailing" constant="89" id="xMM-2B-Yhy"/>
+                            <constraint firstItem="ztJ-UM-Gkj" firstAttribute="top" secondItem="enr-tK-m0t" secondAttribute="top" constant="94" id="za6-tD-OAq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="enr-tK-m0t"/>
                     </view>
                     <connections>
                         <outlet property="DropDown" destination="vfn-pA-GAQ" id="jWT-Kf-nJ5"/>
-                        <outlet property="Language" destination="ZPV-Xu-jgk" id="qB0-nz-v4U"/>
+                        <outlet property="Phrase" destination="ztJ-UM-Gkj" id="GJE-u2-iVb"/>
                         <outlet property="ReturnButton" destination="nZe-4Z-Njh" id="JLz-fo-7dK"/>
                     </connections>
                 </viewController>

@@ -2,6 +2,84 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:alright.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:ample.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:awesome.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:brave.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:close.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:cute.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:excited.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:fat.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:finish.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:fiveminutes.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:frustrated.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:good.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:great.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:money.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:oneminute.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:pretty.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:right.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:sexy.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:skinny.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:smart.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:stillon.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/warrenmui/Documents/GitHub/You-re-Really-Stupid-App/You&apos;re Really Stupid App/Images/stupid.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:timesup.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:twominutes.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/warrenmui/Documents/GitHub/You-re-Really-Stupid-App/You&apos;re Really Stupid App/Images/ugly.m4a">
+   </FileRef>
+   <FileRef
+      location = "group:wrong.m4a">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

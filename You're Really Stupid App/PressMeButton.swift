@@ -24,8 +24,9 @@ class PressMeButton: UIButton {
         super.awakeFromNib()
         
         print("Stupid 3")
+     
         
-        let path = Bundle.main.path(forResource: "stupid", ofType: "mp3")!
+        let path = Bundle.main.path(forResource: GlobalVariables.sharedManager.myName, ofType: "m4a")!
         let url = URL(fileURLWithPath: path)
         do {
             player = try AVAudioPlayer(contentsOf: url)
