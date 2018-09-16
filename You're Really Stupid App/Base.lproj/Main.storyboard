@@ -119,7 +119,7 @@ This app is intended to be fun and to create laughs.  By using this app, the dev
                                     <segue destination="9jt-W4-boo" kind="show" id="9NV-Lj-C2t"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach_Ball" translatesAutoresizingMaskIntoConstraints="NO" id="foD-Pi-fLO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach_Ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="foD-Pi-fLO">
                                 <rect key="frame" x="16" y="400" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="gzS-GM-eRE"/>
@@ -420,7 +420,7 @@ Warren and Kin</string>
     </scenes>
     <resources>
         <image name="Background" width="414" height="736"/>
-        <image name="Beach_Ball" width="958" height="958"/>
+        <image name="Beach_Ball.png" width="958" height="958"/>
         <image name="Button 2D Pressed 2.png" width="430" height="430"/>
         <image name="Button 2D Unpressed 2.png" width="430" height="430"/>
         <image name="Button 3D Pressed.jpg" width="300" height="240"/>
