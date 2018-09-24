@@ -24,8 +24,16 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
             let filename = getDocumentDirectory().appendingPathComponent("DEBUG_Options_ViewController.txt")
             var str = "1: filename = \(filename)"
             do {
-                try (str + "\n").write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-                print("\n", "DEBUG OUTPUT FILE IS LOCATED AT... - ", filename, "\n")
+//                try (str + "\n").write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+                let fileHandle = try FileHandle(forWritingTo: filename)
+                fileHandle.seekToEndOfFile()
+                fileHandle.write((str + "\n").data(using: .utf8)!)
+                fileHandle.closeFile()
+                
+                let searchString1 = filename.absoluteString
+                var result1 = ""
+                result1 = searchString1.replacingOccurrences(of: "file://", with: "")
+                print("\n", "DEBUG OUTPUT FILE IS LOCATED AT... - ", result1, "\n")
             } catch {
                 // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
             }
@@ -38,18 +46,6 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
             let searchString = element
             let regexp = "((\\/){1}([a-zA-Z0-9\\.]*))$"
             var result = ""
-            
-            #if DEBUG_Options
-//            str = "2a: element = \(element)"
-//            do {
-//                let fileHandle = try FileHandle(forWritingTo: filename)
-//                fileHandle.seekToEndOfFile()
-//                fileHandle.write((str + "\n").data(using: .utf8)!)
-//                fileHandle.closeFile()
-//            } catch {
-//                // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
-//            }
-            #endif
             
             if let range = searchString.range(of: regexp, options: .regularExpression) {
                 result = String(searchString[range])

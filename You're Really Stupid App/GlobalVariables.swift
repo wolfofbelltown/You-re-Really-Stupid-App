@@ -11,7 +11,6 @@ class GlobalVariables {
     // These are the properties you can store in your singleton
     var myName: String = "Sexy"
     
-    
     // Here is how you would get to it without there being a global collision of variables.
     // , or in other words, it is a globally accessable parameter that is specific to the
     // class.
@@ -21,4 +20,5 @@ class GlobalVariables {
         }
         return Static.instance
     }
+    
 }
