@@ -14,26 +14,62 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet var Phrase: UILabel!
     @IBOutlet var DropDown: UIPickerView!
     
-
+    // Finds all "m4a" audio files and saves filepaths to an array
     var phrases: [String] = Bundle.main.paths(forResourcesOfType: "m4a", inDirectory: ".")
-
+    
     override func viewDidLoad() {
+        
+        // Sets up debug file output
+        #if DEBUG_Options
+            let filename = getDocumentDirectory().appendingPathComponent("DEBUG_Options_ViewController.txt")
+            var str = "1: filename = \(filename)"
+            do {
+                try (str + "\n").write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+                print("\n", "DEBUG OUTPUT FILE IS LOCATED AT... - ", filename, "\n")
+            } catch {
+                // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+            }
+        #endif
         
         var index_counter = 0
         
+        // Scrubs for audio filename only by removing filepaths and "m4a" extensions
         for (element) in phrases {
             let searchString = element
             let regexp = "((\\/){1}([a-zA-Z0-9\\.]*))$"
             var result = ""
-            print("MINE1 :", result, " and then...", searchString)
+            
+            #if DEBUG_Options
+//            str = "2a: element = \(element)"
+//            do {
+//                let fileHandle = try FileHandle(forWritingTo: filename)
+//                fileHandle.seekToEndOfFile()
+//                fileHandle.write((str + "\n").data(using: .utf8)!)
+//                fileHandle.closeFile()
+//            } catch {
+//                // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+//            }
+            #endif
+            
             if let range = searchString.range(of: regexp, options: .regularExpression) {
                 result = String(searchString[range])
                 result = result.replacingOccurrences(of: "/", with: "")
                 result = result.replacingOccurrences(of: ".m4a", with: "")
                 phrases[index_counter] = result
-                print("MINE2 : ", phrases[index_counter])
+                
+                #if DEBUG_Options
+                str = "2: phrases[\(index_counter)] = \(phrases[index_counter])"
+                do {
+                    let fileHandle = try FileHandle(forWritingTo: filename)
+                    fileHandle.seekToEndOfFile()
+                    fileHandle.write((str + "\n").data(using: .utf8)!)
+                    fileHandle.closeFile()
+                } catch {
+                    // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+                }
+                #endif
+            
             }
-            print("MINE3 : ", result)
             index_counter = index_counter + 1
         }
 
@@ -42,9 +78,19 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         ReturnButton.layer.cornerRadius = 9
         Phrase.layer.cornerRadius = 9
         Phrase.clipsToBounds = true
+        
         #if DEBUG_Options
-            print("DEBUG_Options: \(GlobalVariables.sharedManager.myName)")
+            str = "3: GlobalVariables.sharedManager.myName = \(GlobalVariables.sharedManager.myName)"
+            do {
+                let fileHandle = try FileHandle(forWritingTo: filename)
+                fileHandle.seekToEndOfFile()
+                fileHandle.write((str + "\n").data(using: .utf8)!)
+                fileHandle.closeFile()
+            } catch {
+                // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+            }
         #endif
+    
         // Do any additional setup after loading the view.
         
         // Loads UIPickerView with last selection. Defaults to "English" set in GlobalVariables.swift
@@ -59,10 +105,14 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
         // Dispose of any resources that can be recreated.
     }
     
-    func getDocumentsDirectory() -> URL {
+    func getDocumentDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
+    
+//    func urls(for directory: FileManager.SearchPathDirectory, in domainMask: FileManager.SearchPathDomainMask) -> [URL] {
+//
+//    }
     
     /*
      Descriptions of the following methods are referenced by https://codewithchris.com/uipickerview-example/
@@ -88,9 +138,6 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
     {
         // Saves the last selected Language to global variables
            GlobalVariables.sharedManager.myName = phrases[row]
-        #if DEBUG_Options
-        print("DEBUG_Options: \(GlobalVariables.sharedManager.myName)")
-        #endif
     }
     
     

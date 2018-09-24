@@ -23,9 +23,7 @@ class PressMeButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        print("Stupid 3")
-     
-        
+        // Sets audio to user selected phrase which is saved to GlobalVariables.sharedManager.myName
         let path = Bundle.main.path(forResource: GlobalVariables.sharedManager.myName, ofType: "m4a")!
         let url = URL(fileURLWithPath: path)
         do {
@@ -34,13 +32,10 @@ class PressMeButton: UIButton {
         } catch let error as NSError {
             print(error.description)
         }
-        print("Stupid 3a")
         self.addTarget(self, action: #selector(onPress), for: .touchUpInside)
     }
     
     @objc func onPress() {
-        print("Stupid 4")
-        
         player.play()
     }
 }
