@@ -68,6 +68,7 @@ class Options_ViewController: UIViewController, UIPickerViewDataSource, UIPicker
             }
             index_counter = index_counter + 1
         }
+        phrases.sort()
 
         super.viewDidLoad()
         
